@@ -7,10 +7,10 @@
   --nav-bg: #fff;
   --nav-text: #222;
   --card-bg: #fff;
-  --card-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  --card-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
 }
 
-body[data-theme='dark'] {
+body[data-theme="dark"] {
   --background: #181a1b;
   --text: #f7f8fa;
   --primary: #a3cef1;
@@ -19,14 +19,14 @@ body[data-theme='dark'] {
   --nav-bg: #23272f;
   --nav-text: #f7f8fa;
   --card-bg: #23272f;
-  --card-shadow: 0 2px 16px rgba(0,0,0,0.25);
+  --card-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
 }
 
 .PortfolioApp {
   background: var(--background);
   color: var(--text);
   min-height: 100vh;
-  font-family: 'Poppins', 'Roboto', sans-serif;
+  font-family: "Poppins", "Roboto", sans-serif;
   transition: background 0.3s, color 0.3s;
 }
 
@@ -41,7 +41,7 @@ body[data-theme='dark'] {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   z-index: 100;
   transition: background 0.3s, color 0.3s;
 }
@@ -97,7 +97,10 @@ main {
 
 .gsap-loader {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: var(--background);
   display: flex;
   align-items: center;
@@ -114,12 +117,19 @@ main {
   animation: gsap-spin 1s linear infinite;
 }
 @keyframes gsap-spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .theme-overlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: var(--background);
   opacity: 0;
   pointer-events: none;
@@ -183,7 +193,7 @@ main {
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
   border: 4px solid var(--accent);
   margin-bottom: 1rem;
   background: #fff;
@@ -200,7 +210,7 @@ main {
   font-size: 1.08rem;
   line-height: 1.7;
   color: var(--text);
-  font-family: 'Poppins', 'Roboto', sans-serif;
+  font-family: "Poppins", "Roboto", sans-serif;
   margin-bottom: 0;
 }
 
@@ -225,7 +235,7 @@ main {
   overflow: hidden;
 }
 
-body[data-theme='dark'] .skill-bar {
+body[data-theme="dark"] .skill-bar {
   background: #333;
 }
 
@@ -233,7 +243,7 @@ body[data-theme='dark'] .skill-bar {
   height: 100%;
   background: var(--primary);
   border-radius: 6px;
-  transition: width 0.7s cubic-bezier(.4,2,.6,1);
+  transition: width 0.7s cubic-bezier(0.4, 2, 0.6, 1);
 }
 
 .projects-list {
@@ -256,7 +266,7 @@ body[data-theme='dark'] .skill-bar {
 
 .project-card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
 }
 
 .project-card img {
@@ -304,8 +314,8 @@ body[data-theme='dark'] .skill-bar {
   transition: border 0.2s, background 0.3s, color 0.3s;
 }
 
-body[data-theme='dark'] .contact-form input,
-body[data-theme='dark'] .contact-form textarea {
+body[data-theme="dark"] .contact-form input,
+body[data-theme="dark"] .contact-form textarea {
   border: 1.5px solid #444;
 }
 
@@ -359,7 +369,7 @@ body[data-theme='dark'] .contact-form textarea {
   background: rgba(160, 180, 255, 0.04);
   border-radius: 10px;
   padding: 0.7rem 1.1rem;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
   transition: box-shadow 0.2s, background 0.2s, transform 0.2s;
   cursor: pointer;
   position: relative;
@@ -389,14 +399,14 @@ body[data-theme='dark'] .contact-form textarea {
   display: flex;
   align-items: center;
 }
-body[data-theme='dark'] .skill-bar {
+body[data-theme="dark"] .skill-bar {
   background: #333;
 }
 .skill-level {
   height: 100%;
   background: var(--skill-color, var(--primary));
   border-radius: 6px;
-  transition: width 0.7s cubic-bezier(.4,2,.6,1), background 0.3s;
+  transition: width 0.7s cubic-bezier(0.4, 2, 0.6, 1), background 0.3s;
 }
 .skill-percent {
   font-size: 0.95rem;
@@ -426,13 +436,23 @@ body[data-theme='dark'] .skill-bar {
 
 @media (max-width: 600px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     padding: 0.5rem 1rem;
     gap: 0.5rem;
   }
   .nav-links {
-    gap: 0.7rem;
+    order: 1;
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .theme-toggle {
+    order: 2;
+  }
+  .nav-logo {
+    order: 0;
   }
   .about-section {
     flex-direction: column;
